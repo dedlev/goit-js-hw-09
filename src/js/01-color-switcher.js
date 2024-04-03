@@ -4,9 +4,10 @@ const stopBtn = document.querySelector('button[data-stop]');
 
 let timerId = null;
 
+
 startBtn.addEventListener("click", () => {
  
-    startBtn.setAttribute('disabled', false); 
+    startBtn.setAttribute('disabled', false) 
 
     timerId = setInterval(() => {
         const changeColor = getRandomHexColor();
@@ -17,7 +18,7 @@ startBtn.addEventListener("click", () => {
 
 stopBtn.addEventListener("click", () => {
   clearInterval(timerId);
-    startBtn.removeAttribute('disabled');
+  startBtn.removeAttribute('disabled')
 });
 
  function getRandomHexColor() {
