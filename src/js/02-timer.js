@@ -1,6 +1,6 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-import Notiflix from 'c';
+import Notiflix from 'notiflix';
 
 const refs = {
     inputEl: document.querySelector('#datetime-picker'),
@@ -29,6 +29,9 @@ const options = {
             Notiflix.Notify.warning("Please choose a date in the future");
             return;
         }
+
+        Notiflix.Notify.success('Success, date selected');
+
         refs.startBtn.removeAttribute('disabled');
 
         const convertDeltaTime = convertMs(deltaTime);
@@ -43,7 +46,7 @@ const options = {
                 addLeadingZero(convertDeltaTime);
 
                 if (deltaTime < 1000) {
-                    clearInterval(timerId)
+                    clearInterval(timerId);
                 }
                
             }, 1000);
