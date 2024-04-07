@@ -50,9 +50,11 @@ const options = {
                 }
                
             }, 1000);
+
+            refs.startBtn.setAttribute('disabled', ''); 
+
         });
-    },
-                    
+    },                   
 };    
 
 flatpickr(refs.inputEl, options);
