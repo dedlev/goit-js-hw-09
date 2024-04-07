@@ -43,7 +43,7 @@ const options = {
                 const convertDeltaTime = convertMs(deltaTime);
                 addLeadingZero(convertDeltaTime);
 
-                if (deltaTime <= 1000) {
+                if (deltaTime < 1001) {
                     clearInterval(timerId);
                 }
                
