@@ -37,13 +37,13 @@ const options = {
         addLeadingZero(convertDeltaTime);            
 
         refs.startBtn.addEventListener('click', () => {
-            timerId = setInterval(() => {
+            const timerId = setInterval(() => {
                 const defaultDate = new Date();
                 const deltaTime = selectedDates[0] - defaultDate;
                 const convertDeltaTime = convertMs(deltaTime);
                 addLeadingZero(convertDeltaTime);
 
-                if (deltaTime < 1001) {
+                if (deltaTime < 1000) {
                     clearInterval(timerId);
                 }
                
