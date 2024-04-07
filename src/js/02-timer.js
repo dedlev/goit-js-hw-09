@@ -30,8 +30,6 @@ const options = {
             return;
         }
 
-        Notiflix.Notify.success('Success, date selected');
-
         refs.startBtn.removeAttribute('disabled');
 
         const convertDeltaTime = convertMs(deltaTime);
@@ -45,7 +43,7 @@ const options = {
                 const convertDeltaTime = convertMs(deltaTime);
                 addLeadingZero(convertDeltaTime);
 
-                if (deltaTime < 1000) {
+                if (deltaTime <= 1000) {
                     clearInterval(timerId);
                 }
                
